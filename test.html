@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Change Image Source</title>
+    <style>
+        img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <img id="myImg" src="D:/Year 4/Term 1/Websites/Hello World/images/Retro-TV-Frame.png" alt="Image">
+    <button id="myButton">Change Image</button>
+
+    <script>
+        const images = ['D:/Year 4/Term 1/Websites/Hello World/images/Color TV.png', 'third_image.jpg', 'fourth_image.jpg', 'fifth_image.jpg'];
+        const imgElement = document.getElementById('myImg');
+        const button = document.getElementById('myButton');
+        let imgIndex = 1;
+
+        button.addEventListener('click', () => {
+            if (imgIndex < images.length) {
+                imgElement.src = images[imgIndex];
+                imgIndex++;
+            } else {
+                imgIndex = 0;
+                imgElement.src = images[imgIndex];
+                imgIndex++;
+            }
+        });
+    </script>
+</body>
+</html>

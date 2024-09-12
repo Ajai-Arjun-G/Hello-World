@@ -1,0 +1,372 @@
+@font-face {
+    font-family: Caveat;
+    src: url("D:/Year 4/Term 1/Websites/Hello World/Caveat/static/Caveat-Regular.ttf");
+}
+
+* {
+    background-color: #A24545;
+    font-family: Caveat;
+    font-size: 36px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    width: 1535px;
+    height: 729px;
+    overflow: hidden;
+    margin: auto;
+}
+
+.tv-frame {
+    width: 1100px;
+    height: 630px;
+    margin: auto;
+    margin-top: 60px;
+    padding: 20px;
+    margin-left: 210px;
+}
+
+.small{
+    width: 270px;
+    height: 150px;
+}
+
+.mid{
+    width: 305px;
+    height: 180px;
+}
+
+.leftTV{
+    top: 50px;
+    left: -300px;
+    position: absolute;
+    animation: movearound 2s infinite;
+    animation-timing-function: linear;
+    visibility: hidden; 
+    animation-play-state: paused;
+
+}
+
+.rightTV{
+    bottom: 70px;
+    right: -120px;
+    position: absolute;
+    mix-blend-mode: darken;
+    animation: blink2 2s infinite;
+    visibility: hidden; 
+    animation-play-state: paused;
+}
+
+.topTV{
+    top: -80px;
+    right: 0px;
+    position: absolute;
+    mix-blend-mode: darken;
+    animation: movearound2 2s infinite;
+    animation-timing-function: linear;
+    visibility: hidden; 
+    animation-play-state: paused;
+}
+
+.bottomTV{
+    bottom: -140px;
+    left: -10px;
+    position: absolute;
+    animation: movearound3 2s infinite;
+    visibility: hidden; 
+    animation-play-state: paused;
+}
+
+.sent1{
+    top: 250px;
+    left: 610px;
+    z-index: 3;
+    position: absolute;
+    color: aliceblue;
+    background-color: transparent;
+    text-align: center;
+}
+
+.sent2{
+    top: 320px;
+    left: 540px;
+    z-index: 3;
+    position: absolute;
+    color: aliceblue;
+    background-color: transparent;
+    text-align: center;
+}
+
+.sent3{
+    width: 370px;
+    top: 390px;
+    left: 490px;
+    z-index: 3;
+    position: absolute;
+    border: none;
+    text-decoration: none;
+    background-color: transparent;
+    color: aliceblue;
+    outline: none;
+    text-align: center;
+}
+
+.sent3::placeholder{
+    color: aliceblue;
+    background-color: transparent;
+    opacity: 0.9;
+    text-align: center;
+}
+
+
+.optional{
+    font-size: 26px;
+    z-index: 3;
+    top: 480px;
+    left: 580px;
+    position: absolute;
+    color: aliceblue;
+    width: 200px;
+    height: 50px;
+    background-color: #000;
+    border-radius: 5px;
+    visibility: hidden;
+    animation: blink 2s infinite; 
+    animation-play-state: paused; 
+    animation-timing-function: ease;
+    text-align: center;
+}
+
+span{
+    animation: blinkCursor 0.7s infinite; 
+}
+
+.popUp{
+    border-radius: 20px;
+    background-color: #000;
+    z-index: 10;
+    display: none;
+    top: 190px;
+    left: 500px;
+    position: absolute;
+    animation: covereverything 3s forwards;
+}
+
+.pop-content{
+    margin: 15% auto;
+    color: aliceblue;
+    background-color: #000;
+    padding: 20px;
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    
+}
+
+p{
+    background-color: #000;
+    animation: sizegrow 2s forwards;
+    padding-bottom: 10px;
+    margin-bottom: 5px;
+}
+
+.close{
+    color: #bcbbbb;
+    float: right;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #000;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 10001;
+    transition: all 1s;
+    animation: growCloseButton 3s forwards;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+}
+
+
+#done {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ebebeb;
+    color: black;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+#done:hover{
+    background-color:#000;
+    color: aliceblue;
+}
+
+#name{
+    background-color:#000;
+    animation: sizegrow 2s forwards;
+}
+
+/* Fading transitions */
+.fade-in {
+    transition: opacity 0.5s ease-in;
+    opacity: 1;
+}
+
+.fade-out {
+    transition: opacity 0.5s ease-out;
+    opacity: 0;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes movearound {
+    0% {
+        top: 50px;
+        left:-300px;
+        transform: rotate(70deg);
+    }
+    50%{
+        top: 150px;
+        left: -180px;
+        transform: rotate(0deg);
+    }
+    100% {
+        top: 300px;
+        left: -300px;
+        transform: rotate(-70deg);
+    }
+}
+
+@keyframes movearound2 {
+    0% {
+        transform: rotate(90deg);
+        top: -260px;
+    }
+    50% {
+        transform: rotate(0deg);
+        top: -80px;
+
+    }
+    100% {
+        transform: rotate(-90deg);
+        top: -260px;
+    }
+}
+
+@keyframes movearound3 {
+    0% {
+        bottom: -130px;
+        left: -10px;
+        transform: rotate(-30deg);
+    }
+    50% {
+        bottom: -130px;
+        transform: rotate(30deg);
+    }
+    100%{
+        bottom: -130px;
+        transform: rotate(-30deg);
+    }
+}
+
+
+@keyframes blink2 {
+    0% {
+        transform: rotate(-30deg);
+        content: url("D:/Year 4/Term 1/Websites/Hello World/images/retro TV.png");
+    }
+    50% {
+        transform: rotate(30deg);
+        content: url("D:/Year 4/Term 1/Websites/Hello World/images/Color TV.png");
+    }
+    100% {
+        transform: rotate(-30deg);
+        content: url("D:/Year 4/Term 1/Websites/Hello World/images/retro TV.png");
+    }
+} 
+
+@keyframes blinkCursor {
+    0% {
+        border-color: transparent;
+    }
+    50% {
+        border-color: aliceblue;
+    }
+    100% {
+        border-color: transparent;
+    }
+}
+
+@keyframes covereverything {
+    0%{
+        width: 400px;
+        height: auto;
+        top: 190px;
+        left: 500px;
+        border-radius: 20px;
+    }
+    50%{
+        width: 65vw;
+        height: 65vh;
+        top: 25vh; 
+        left: 200px;
+        border-radius: 10px;
+    }
+    100%{
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        border-radius: 0px;
+    }
+}
+
+@keyframes growCloseButton {
+    0% {
+        font-size: 20px;
+        top: 10px;
+        right: 10px;
+    }
+    50% {
+        font-size: 40px;
+        top: 5px;
+        right: 20px;
+    }
+    100% {
+        font-size: 60px;
+        top: 5px;
+        right: 35px;
+    }
+}
+
+@keyframes sizegrow {
+    0%{
+        font-size: initial;
+    }
+    50%{
+        font-size: 35px;
+    }
+    100%{
+        font-size: 55px;
+    }
+}
