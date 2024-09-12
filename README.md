@@ -1,0 +1,1 @@
+This was a project that I created to practice/get in touch with CSS and Java Script. It is a simple hello world page but with a twist. I added CSS Animations through keyframes and impemented action controls that trigger different actions and animations. It is a simple page site that uses basic HTML, CSS, JS. 
